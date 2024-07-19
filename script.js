@@ -41,7 +41,7 @@ const dataCollection = {
     ]
 };
 
-let luckyMassage = []
+let luckyMessage = []
 
 for (let prop in dataCollection){
 
@@ -49,17 +49,23 @@ let massageid = generateRandomNumber(dataCollection[prop].length)
 
 switch (prop){
     case 'inspirationalQuotes':
-        luckyMassage.push(`Your lucky qoute is "${dataCollection[prop][massageid]}". `)
+        luckyMessage.push(`Your lucky qoute is "${dataCollection[prop][massageid]}". `)
         break
     case 'programmingAdvice': 
-        luckyMassage.push(`Your programming advice is "${dataCollection[prop][massageid]}".`)
+        luckyMessage.push(`Your programming advice is "${dataCollection[prop][massageid]}".`)
         break 
     case 'funFacts':
-        luckyMassage.push(`Fun fact "${luckyMassage[prop][massageid]}".`) 
+        luckyMessage.push(`Fun fact "${dataCollection[prop][massageid]}".`) 
         break
-        default:
+        default: 
             personalWisdom.push('There is not enough info.')        
 }
 
 }
- console.log(luckyMassage)
+
+const formatMessage = (messages) => {
+    const formatted = messages.join('\n');
+    console.log(formatted);
+};
+
+formatMessage(luckyMessage);
