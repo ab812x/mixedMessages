@@ -45,20 +45,20 @@ let luckyMessage = []
 
 for (let prop in dataCollection){
 
-let massageid = generateRandomNumber(dataCollection[prop].length)
+let massageId = generateRandomNumber(dataCollection[prop].length)
 
 switch (prop){
     case 'inspirationalQuotes':
-        luckyMessage.push(`Your lucky qoute is "${dataCollection[prop][massageid]}". `)
+        luckyMessage.push(`Your lucky qoute is "${dataCollection[prop][massageId]}". `)
         break
     case 'programmingAdvice': 
-        luckyMessage.push(`Your programming advice is "${dataCollection[prop][massageid]}".`)
+        luckyMessage.push(`Your programming advice is "${dataCollection[prop][massageId]}".`)
         break 
     case 'funFacts':
-        luckyMessage.push(`Fun fact "${dataCollection[prop][massageid]}".`) 
+        luckyMessage.push(`Fun fact "${dataCollection[prop][massageId]}".`) 
         break
         default: 
-            personalWisdom.push('There is not enough info.')        
+            luckyMessage.push('There is not enough info.')        
 }
 
 }
@@ -69,3 +69,4 @@ const formatMessage = (messages) => {
 };
 
 formatMessage(luckyMessage);
+
