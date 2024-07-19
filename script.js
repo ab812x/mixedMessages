@@ -69,3 +69,4 @@ const formatMessage = (messages) => {
 };
 
 formatMessage(luckyMessage);
+
